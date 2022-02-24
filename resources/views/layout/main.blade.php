@@ -12,34 +12,7 @@
   <link rel="stylesheet" href="css/styles.css">
   
 </head>
-<body>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="add-task-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Nova Tarefa</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form id="form-add-task">
-            <label for="title-task">Titulo da tarefa:</label>
-            <input type="text" name="title-task" value="title" id="title-task" class="form-control">
-            
-            <label class="mt-3" for="description-task">Descrição da tarefa:</label>
-            <textarea name="description-task" id="description-task" class="form-control" rows="5"></textarea>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button title="Cancelar" type="button" class="btn-close-modal btn btn-danger" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i></button>
-          <button id="btn-add-task" title="Adicionar Nota" type="button" class="btn btn-primary"><i class="fa-solid fa-check"></i></button>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  
+<body>  
   <div id="navbar-area">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
