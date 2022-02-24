@@ -1,0 +1,58 @@
+/* Geral */
+
+body {
+  background-color: #f8f9fa;
+}
+
+main {
+  margin-top: 50px;
+}
+
+/* Cards */
+
+.card {
+  margin: 10px 0;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.btn-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.card .btn {
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.card .btn .icons-buttons{
+  color: #FFF;
+  font-size: 15px;
+}
+
+/* Modal */
+.modal-footer .btn {
+  border-radius: 50%;
+  font-size: 15px;
+}
+
+/* Footer */
+footer{
+  text-align: center;
+  background-color: #353e48;
+  color: #FFF;
+  padding: 30px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p{
+  margin: 0;
+}
