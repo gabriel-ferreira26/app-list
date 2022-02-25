@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\tasks;
+use App\Models\User;
 
 class TasksController extends Controller
 {
@@ -22,8 +23,7 @@ class TasksController extends Controller
 
         $task->title = $request->titleTask;
         $task->description = $request->descriptionTask;
-        print_r($request->userid);
-        die;
+
         $task->save();
 
         return redirect('/')->with('msg','Nova tarefa adicionada a lista!');
