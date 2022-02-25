@@ -4,5 +4,3 @@ $("#btn-add-task").click(function(){
   $("#form-add-task").attr('action', '/tasks');
   $("#form-add-task").submit();
 });
-
-

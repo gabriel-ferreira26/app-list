@@ -33,4 +33,11 @@ class TasksController extends Controller
 
         return redirect('/')->with('msg','Nova tarefa adicionada a lista!');
     }
+
+    public function destroy($id) {
+        Tasks::findOrFail($id)->delete();
+
+        return redirect('/')->with('msg','Tarefa excluida com sucesso!');
+    }
+
 }
