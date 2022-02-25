@@ -22,7 +22,8 @@ class TasksController extends Controller
 
         $task->title = $request->titleTask;
         $task->description = $request->descriptionTask;
-
+        print_r($request->userid);
+        die;
         $task->save();
 
         return redirect('/')->with('msg','Nova tarefa adicionada a lista!');

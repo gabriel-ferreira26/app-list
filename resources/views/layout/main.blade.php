@@ -19,6 +19,14 @@
         <a class="navbar-brand" href="#">Navbar</a>
         <div class="d-flex">
           <button class="btn btn-success" type="submit" data-bs-toggle="modal" data-bs-target="#add-task-modal"><i class="fa-solid fa-plus"></i>  Nova Tarefa</button>
+          <form action="/logout" method="post">
+            @csrf
+            <a  href="/logout" 
+                class="nav-link" 
+                onclick="event.preventDefault();this.closest('form').submit();">
+            Sair  <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </a>
+          </form>
         </div> 
       </div>
     </nav>
