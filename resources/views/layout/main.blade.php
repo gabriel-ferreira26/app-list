@@ -13,7 +13,7 @@
   
 </head>
 <body>  
-  <div id="navbar-area">
+  <header id="navbar-area">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
@@ -22,10 +22,16 @@
         </div> 
       </div>
     </nav>
-  </div>
-  
+  </header>
+
+  @if(session('msg'))
+    <p class="msg">
+      {{ session('msg') }}
+    </p>
+  @endif
+
   <main>
-    <div class="container">
+    <div class="container-fluid">
       @yield('content')
     </div>
   </main>

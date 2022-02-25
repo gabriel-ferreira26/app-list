@@ -8,16 +8,37 @@ main {
   margin-top: 50px;
 }
 
+header {
+  top: 0;
+}
+
+.msg {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  width: 100%;
+  margin-bottom: 0;
+  text-align: center;
+  padding: 10px;
+}
+
 /* Cards */
 
+#cards-area {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .card {
-  margin: 10px 0;
+  margin: 10px 5px;
+  max-height: 250px;
+  overflow-y: auto;
 }
 
 .card-body {
   display: flex;
   flex-direction: column;
-
 }
 
 .btn-card {
@@ -43,14 +64,17 @@ main {
 }
 
 /* Footer */
+
 footer{
-  text-align: center;
-  background-color: #353e48;
+  display:block;
+  position:fixed;
+  width:100%;
+  bottom:0vh;
+  left:0;
+  background-color:#353e48;
   color: #FFF;
-  padding: 30px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  text-align:center;
+  padding: 15px 0;
 }
 
 footer p{

@@ -18,13 +18,13 @@ class TasksController extends Controller
         $task = new Tasks;
 
         $request->titleTask = ($request->titleTask == null) ? " " : $request->titleTask;
-        $request->descriptionTask = ($request->descriptionTask == null) ? "Sem descrição" : $request->descriptionTask;
+        $request->descriptionTask = ($request->descriptionTask == null) ? " " : $request->descriptionTask;
 
         $task->title = $request->titleTask;
         $task->description = $request->descriptionTask;
 
         $task->save();
 
-        return redirect('/');
+        return redirect('/')->with('msg','Nova tarefa adicionada a lista!');
     }
 }

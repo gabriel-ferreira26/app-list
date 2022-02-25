@@ -15,10 +15,10 @@
           <form id="form-add-task" method="post">
             @csrf
             <label for="title-task">Titulo da tarefa:</label>
-            <input type="text" name="titleTask" id="title-task" class="form-control">
+            <input type="text" name="titleTask" id="title-task"  class="form-control">
             
             <label class="mt-3" for="description-task">Descrição da tarefa:</label>
-            <textarea name="descriptionTask" id="description-task" class="form-control" rows="5"></textarea>
+            <textarea maxlength="255" name="descriptionTask" id="description-task" class="form-control" rows="5"></textarea>
           </form>
         </div>
         <div class="modal-footer">
@@ -29,7 +29,7 @@
     </div>
   </div>
   
-  <div id="cards-area" class="row">
+  <div id="cards-area">
     @foreach($tasks as $task)
       <div class="col-md-3">
         <div class="card">
