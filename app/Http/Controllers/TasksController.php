@@ -10,7 +10,9 @@ class TasksController extends Controller
 {
     public function index(){
 
-        $tasks = Tasks::all();
+        $user = auth()->user();
+        $tasks = $user->tasks;
+
 
         return view('welcome',['tasks'=>$tasks]);
     }
@@ -23,6 +25,9 @@ class TasksController extends Controller
 
         $task->title = $request->titleTask;
         $task->description = $request->descriptionTask;
+
+        $user = auth()->user();
+        $task->user_id = $user->id;
 
         $task->save();
 

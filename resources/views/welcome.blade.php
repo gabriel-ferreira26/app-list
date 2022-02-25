@@ -29,6 +29,10 @@
       </div>
     </div>
   </div>
+
+  <div>
+    <h2>Bem-Vindo {{ auth()->user()->name }}</h2>
+  </div>
   
   <div id="cards-area">
     @foreach($tasks as $task)

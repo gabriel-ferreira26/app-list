@@ -13,9 +13,9 @@ use App\Http\Controllers\TasksController;
 |
 */
 
-Route::get('/', [TasksController::class, 'index']);
+Route::get('/', [TasksController::class, 'index'])->middleware('auth');
 Route::post('/tasks', [TasksController::class, 'store']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+    return view('/dashboard');
 })->name('dashboard');
