@@ -40,4 +40,18 @@ class TasksController extends Controller
         return redirect('/')->with('msg','Tarefa excluida com sucesso!');
     }
 
+    public function ajaxSearch($id) {        
+        $task = Tasks::findOrFail($id);
+
+        echo json_encode("$task");
+    }
+
+    public function update(Request $request){
+
+        Tasks::findOrFail($request->id)->update($request->all());
+
+        return redirect('/')->with('msg','Tarefa editada com sucesso!');
+
+    }
+
 }

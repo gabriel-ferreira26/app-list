@@ -16,7 +16,8 @@ use App\Http\Controllers\TasksController;
 Route::get('/', [TasksController::class, 'index'])->middleware('auth');
 Route::post('/tasks', [TasksController::class, 'store'])->middleware('auth');
 Route::delete('/tasks/{id}', [TasksController::class, 'destroy'])->middleware('auth');
-Route::get('/tasks/{id}', [TasksController::class, 'edit'])->middleware('auth');
+Route::get('/tasks/search/{id}', [TasksController::class, 'ajaxSearch'])->middleware('auth');;
+Route::put('/tasks/update/{id}', [TasksController::class, 'update'])->middleware('auth');;
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('/dashboard');
